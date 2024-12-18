@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-import multer from "multer";
 import cors from "cors";
 import path from "path";
 import fs from "fs";
@@ -22,6 +21,8 @@ app.get("/api/", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server started on port ${process.env.PORT}`)
+
+
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`)
 })
