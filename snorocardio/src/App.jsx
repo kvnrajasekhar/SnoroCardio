@@ -1,12 +1,21 @@
-import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/login";
+import Forgotpass from "./Components/Forgotpass";
+import HomeScreen from "./Components/HomeScreen";
+import VitalsGraphScreen from "./Components/VitalsGraphScreen";
 
 function App() {
   return (
-    <>
+    <Router>
       <div>
-        <h1 className="text-3xl font-bold underline">Hello World</h1>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/forgot-password" element={<Forgotpass />} />
+          <Route path="home" element={<HomeScreen />} />
+          <Route path="graph" element={<VitalsGraphScreen />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 
